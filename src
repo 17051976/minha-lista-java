@@ -1,1 +1,37 @@
+package src;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		Opcoes opc = new Opcoes();
+		MinhaLista ml = new MinhaLista();
+		
+		while(true) {
+			opc.opcoes();
+			
+			System.out.print("Digite uma opção: ");
+			int opcao = teclado.nextInt();
+			
+			if(opcao == 1) {
+				ml.setText();
+			}
+			if(opcao == 2) {
+				ml.setRemover();
+			}
+			if(opcao == 3) {
+				ml.list();
+			}
+			if(opcao == 4) {
+				System.out.print("Encerrando programa!");
+				break;
+			}
+		}
+	}
+}
